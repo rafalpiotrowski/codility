@@ -3,21 +3,21 @@ using System.Linq;
 
 namespace Codility.PermMissingElem
 {
-    //still working on it
+    //still working on it got 50%
     public class Solution {
         public int solution(int[] A) {
-            if (A.Length == 0) return 0;
+            if (A == null || A.Length < 2) throw new Exception("incorrect input");
 
             Array.Sort(A);
-            for(int i=0; i<=A.Length-1; i++)
+            for(int i=0; i<A.Length; i++)
             {
-                if(i < A.Length) {
+                if(i < A.Length-1) {
                     if(A[i]+1 != A[i+1]) {
                         return A[i]+1;
                     }
                 }
             }
-            return 0;
+            throw new Exception("number not found");
         }
     }
 }

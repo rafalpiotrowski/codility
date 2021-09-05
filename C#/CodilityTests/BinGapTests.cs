@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Codility;
 
-namespace CodilityTests
+namespace Codility.Tests
 {
     [TestClass]
     public class BinGapTests
